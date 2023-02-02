@@ -1,0 +1,24 @@
+type Cat {
+  # Example field (placeholder)
+  exampleField: Int
+}
+
+input CreateCatInput {
+  # Example field (placeholder)
+  exampleField: Int
+}
+
+input UpdateCatInput {
+  id: Int!
+}
+
+type Query {
+  cats: [Cat]!
+  cat(id: Int!): Cat
+}
+
+type Mutation {
+  createCat(createCatInput: CreateCatInput!): Cat!
+  updateCat(updateCatInput: UpdateCatInput!): Cat!
+  removeCat(id: Int!): Cat
+}
